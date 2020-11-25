@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="cdr">
+    <output-path>$PROJECT_DIR$/out/artifacts/cdr</output-path>
+    <root id="archive" name="cdr.jar">
+      <element id="module-output" name="Java" />
+    </root>
+  </artifact>
+</component>
