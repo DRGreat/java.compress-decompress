@@ -14,7 +14,7 @@ public class ZipUtil {
     private static final int BUFFER = 512;
 
     /**压缩得到的文件的后缀名*/
-    private static final String SUFFIX=".zip";
+    private static final String SUFFIX=".cdr";
 
     /**
      * 得到源文件路径的所有文件
@@ -183,9 +183,9 @@ public class ZipUtil {
 
             zipFileName=zipFileName+SUFFIX;
             ZipInputStream zis=new ZipInputStream(new FileInputStream(zipFileName));
-            ZipEntry       zipEntry       = null;
-            byte[]         buffer         = new byte[BUFFER];//缓冲器
-            int            readLength     = 0;//每次读出来的长度
+            ZipEntry zipEntry=null;
+            byte[] buffer=new byte[BUFFER];//缓冲器
+            int readLength=0;//每次读出来的长度
             while ((zipEntry=zis.getNextEntry())!=null){
                 if(zipEntry.isDirectory()){//若是目录
                     File file=new File(destPath+"/"+zipEntry.getName());
